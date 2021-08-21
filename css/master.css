@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin:0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;  
+    width: 100vw;
+    font-family: Raleway , sans-serif;
+    
+}
+.container{
+    width:85%;
+    margin-left:auto;
+    margin-right: auto;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+.head{
+    width: 100%;
+    padding:35px;
+    background-color: #1E2C69;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px  80px 10px 10px;
+    margin-bottom: 20px;
+}
+.head .logo{
+    width:160px;
+    margin-bottom: 25px;
+}
+.head .icons{
+    width:228px;
+    display: flex;
+    
+    
+}
+.head .icons img{
+    flex-basis: 33%;
+    height:50px;
+    padding:12px;
+    margin-right: 20px;
+    background-color: #0B112C;
+    border-radius: 7px;
+}
+.quote
+{
+    width: 100%;
+    padding:35px;
+    background-color: #1E2C69;
+    border-radius: 10px  10px 10px 10px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.quote p{
+    color:White;
+    margin-bottom: 20px;
+}
+.quote p span{
+    font-weight: 700;
+}
+.quote .progress{
+    width:100%;
+    background-color:#141F4B;
+    height: 20px;
+    border-radius: 10px;
+    position: relative;
+    
+}
+.quote .progress::before{
+    content: "1000 GB";
+    position: absolute;
+    top:30px;
+    right:0;
+    color:white;
+    font-weight: 700;
+    font-size: 14px;
+}
+.quote .progress::after{
+    content: "0 GB";
+    position: absolute;
+    top:30px;
+    left:0;
+    color:white;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.quote .progress div{
+    position: relative;
+    width:100%; 
+}
+.quote .progress div::before{
+    content:"";
+    position: absolute;
+    border-radius:10px ;
+    left:2.5px;
+    top:2.5px;
+    width:78%;
+    height: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-image: linear-gradient(hsl(6, 100%, 80%) , hsl(335, 100%, 65%));   
+}
+.quote .progress div::after{
+    content: "";
+    position: absolute;
+    left: calc(75% - 0px);
+    top: 4px;
+    width: 11.5px;
+    height: 11.5px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.quote .left{
+    font-size: 40px;
+    font-weight: 700;
+    background-color: white;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px 10px 10px 10px;
+    position: relative;
+    top: 65px;
+    left:60px;
+}
+.quote .left::after{
+    content: "";
+    display: none;
+    border:30px solid ;
+    border-color: white white transparent transparent;
+    width:1px;
+    height:1px;
+    position: absolute;
+    top:100%;
+    left:100%;
+    transform: translate(-100% ,-50%);
+
+}
+.quote .left span{
+    color:#8E8F94;
+    font-size: 14px;
+    font-weight: normal;
+}
+@media (min-width:768px){
+    .container{
+        
+        display: flex;
+        align-items:flex-end;
+        justify-content: space-between;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50% , -50%);
+    }
+    .head{
+        flex-basis: 48%;
+        margin-bottom: 0;
+    }
+    .quote{
+        flex-basis: 48%;
+        padding-bottom: 10px;
+        height: 150px;
+    }
+    .quote .left{
+        top:-150%;
+        left:62%;
+    }
+    .quote .left::after{
+        display:initial
+    }
+}
